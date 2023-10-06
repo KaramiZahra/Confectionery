@@ -30,7 +30,43 @@
 </head>
 
 <body>
-    
+    <header class="header">
+        <div class="nav-bar-bg">
+            <div class="nav-bar lg:relative">
+                <div class="logo lg:ml-8">
+                    <img src="./img/logo.svg" alt="logo">
+                </div>
+                <ul class="menu lg:absolute lg:top-12 lg:hidden lg:bg-white lg:w-full">
+                    <li><a class="ml-4" href="#">Home</a></li>
+                    <li><a class="ml-4" href="#">About</a></li>
+                    <li><a class="ml-4" href="#">Store</a></li>
+                </ul>
+                <span class="header-menu lg:block lg:absolute lg:right-8">
+                    <i class="fa-solid fa-bars"></i>
+                </span>
+                <div class="contact-cart">
+                    <div class="contact lg:hidden">
+                        <i class="fa-solid fa-phone"></i>
+                        &nbsp;
+                        <p>+123 456 789</p>
+                    </div>
+                    <div class="nav-cart-bg lg:w-full lg:h-24 lg:bg-white lg:absolute lg:left-0 lg:top-[9.5rem] lg:hidden">
+                        <div class="nav-cart lg:absolute lg:-left-12 lg:top-6">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            &nbsp;
+                            <p class="nav-items">2 items -</p>
+                            &nbsp;
+                            <p class="nav-price">$10.49</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-text">
+            <p>Welcome To <span>Grandma's</span></p>
+            <button>EXPLORE</button>
+        </div>
+    </header>
     <script src="js/styles.js"></script>
 </body>
 
