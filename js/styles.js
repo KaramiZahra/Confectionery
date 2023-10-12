@@ -112,11 +112,11 @@ function createProductCard(products) {
   products.forEach(function (product) {
     productsContainer.insertAdjacentHTML(
       "beforeend",
-      '<div data-product-id="' +
-        product.id +
-        '" class="product"><div class="product-img"><img src="' +
+      '<div class="product"><div class="product-img"><img src="' +
         product.img +
-        '"><div class="product-cart"><i class="fa-solid fa-cart-shopping"></i></div></div><div class="product-description"><p>' +
+        '"><div class="product-cart"><i data-icon-id="' +
+        product.id +
+        '" class="fa-solid fa-cart-shopping"></i></div></div><div class="product-description"><p>' +
         product.title +
         "</p><p>$" +
         product.price +
@@ -144,4 +144,25 @@ product.forEach(function (item) {
   item.addEventListener("touchstart", showCartIcon);
   item.addEventListener("mouseleave", hideCartIcon);
   item.addEventListener("touchend", hideCartIcon);
+});
+
+// add product to basket by clicking the respective icon
+let cartIcons = document.querySelectorAll(".product-cart i");
+let userBasket = [];
+
+cartIcons.forEach(function (icon) {
+  icon.addEventListener("click", function () {
+    let getProductId = icon.getAttribute("data-icon-id");
+    // find product in products' array
+    let findProduct = productsArray.find(function (product) {
+      return product.id == getProductId;
+    });
+    // check the product's exitence in basket
+    let isInBasket = userBasket.some(function (product) {
+      return product.id == findProduct.id;
+    });
+    if (!isInBasket) {
+      userBasket.push(findProduct);
+    }
+  });
 });
