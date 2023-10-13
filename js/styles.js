@@ -218,7 +218,23 @@ cartIcons.forEach(function (icon) {
     });
     if (!isInBasket) {
       userBasket.push(findProduct);
+      console.log(userBasket);
     }
+    setLocalStorage(userBasket)
   });
 });
 
+// set local storage
+function setLocalStorage(products) {
+  localStorage.setItem("user-basket", JSON.stringify(products));
+}
+// get local storage
+window.addEventListener("load", function () {
+  let getBasket = JSON.parse(localStorage.getItem("user-basket"));
+  // place products in the basket in case of existence
+  if (getBasket) {
+    userBasket = getBasket;
+  } else {
+    userBasket = [];
+  }
+});
