@@ -49,6 +49,17 @@ body {
     font-size: 1.2rem;
     line-height: 2.7rem;
   }
+  button {
+    padding: .5rem 1rem;
+    margin-top: 2rem;
+    border: 2px solid $Black;
+    border-radius: 2rem;
+
+    &:hover {
+      background-color: $Black;
+      color: $Pink;
+    }
+  }
 }
 .product-image {
   img {

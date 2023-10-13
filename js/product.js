@@ -134,3 +134,41 @@ if (findItem) {
   itemText.innerHTML = findItem.desc;
   itemImage.setAttribute("src", findItem.img);
 }
+
+// add product to basket
+let itemBtn = document.querySelector("button");
+let userBasket = [];
+
+itemBtn.addEventListener("click", function () {
+  let getProductId = itemId;
+  // find product in products' array
+  let findProduct = productsArray.find(function (product) {
+    return product.id == getProductId;
+  });
+  // check the product's exitence in basket
+  let isInBasket = userBasket.some(function (product) {
+    return product.id == findProduct.id;
+  });
+  if (!isInBasket) {
+    userBasket.push(findProduct);
+    alert("The item added to your shopping cart");
+  } else {
+    alert("The item exists in your shopping cart");
+  }
+  setLocalStorage(userBasket);
+});
+
+// set local storage
+function setLocalStorage(products) {
+  localStorage.setItem("user-basket", JSON.stringify(products));
+}
+// get local storage
+window.addEventListener("load", function () {
+  let getBasket = JSON.parse(localStorage.getItem("user-basket"));
+  // place products in the basket in case of existence
+  if (getBasket) {
+    userBasket = getBasket;
+  } else {
+    userBasket = [];
+  }
+});

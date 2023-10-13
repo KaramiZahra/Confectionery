@@ -220,6 +220,9 @@ cartIcons.forEach(function (icon) {
     });
     if (!isInBasket) {
       userBasket.push(findProduct);
+      alert("The item added to your shopping cart");
+    } else {
+      alert("The item exists in your shopping cart");
     }
     setLocalStorage(userBasket);
   });
