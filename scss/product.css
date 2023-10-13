@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
+body {
+  font-family: "Kaushan Script", cursive;
+  background: #fff;
+  color: #000;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.nav {
+  margin: 2rem;
+  display: inline-block;
+  border: 2px solid #000;
+  border-radius: 50%;
+}
+.nav:hover {
+  color: #ef7998;
+  border: 2px solid #ef7998;
+}
+.nav .back-btn {
+  font-size: 1.8rem;
+  padding: 0.5rem 0.7rem;
+}
+
+.product-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+.product-container .product-text,
+.product-container .product-image {
+  flex-basis: 50%;
+  margin: 2rem;
+}
+
+.product-text h2 {
+  color: #ef7998;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+.product-text p {
+  text-align: justify;
+  font-size: 1.2rem;
+  line-height: 2.7rem;
+}
+
+.product-image img {
+  border-radius: 0.5rem;
+}/*# sourceMappingURL=product.css.map */

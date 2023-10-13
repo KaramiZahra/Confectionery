@@ -16,7 +16,7 @@ menuIcon.addEventListener("click", function () {
   }
 });
 
-// store section array
+// products array
 let productsArray = [
   {
     id: 1,
@@ -128,9 +128,11 @@ function createProductCard(products) {
         product.img +
         '"><div class="product-cart"><i data-icon-id="' +
         product.id +
-        '" class="fa-solid fa-cart-shopping"></i></div></div><div class="product-description"><p>' +
+        '" class="fa-solid fa-cart-shopping"></i></div></div><div class="product-description"><p><a href="product.html?id=' +
+        product.id +
+        '">' +
         product.title +
-        "</p><p>$" +
+        "</a></p><p>$" +
         product.price +
         "</p></div></div>"
     );
@@ -218,11 +220,27 @@ cartIcons.forEach(function (icon) {
     });
     if (!isInBasket) {
       userBasket.push(findProduct);
-      console.log(userBasket);
     }
-    setLocalStorage(userBasket)
+    setLocalStorage(userBasket);
   });
 });
+
+/////////////////////////////////// I'll work on it asap ////////////////////////////////
+// // appearance and disappearance of the modals
+// let newProductModal = document.querySelector(".new-product-modal");
+// let existedProductModal = document.querySelector(".existed-product-modal");
+// // shows modal after the product added to the basket
+// function showNewModal(e) {
+//   newProductModal.style.left = e.clientX + "px";
+//   newProductModal.style.top = e.clientY + "px";
+//   newProductModal.style.display = "flex";
+// }
+// // shows modal when the product is already in the basket
+// function showExistedModal(e) {
+//   existedProductModal.style.left = e.clientX + "px";
+//   existedProductModal.style.top = e.clientY + "px";
+//   existedProductModal.style.display = "flex";
+// }
 
 // set local storage
 function setLocalStorage(products) {
