@@ -14,7 +14,7 @@ body {
   margin: 0 auto;
   padding: 0;
 }
-// header section 
+// header section
 .header {
   background-image: linear-gradient($yellowTrans, $yellowTrans),
     url(../img/headerBcg.jpeg);
@@ -40,6 +40,7 @@ body {
   justify-content: space-between;
 }
 
+// logo
 .logo {
   transition: all 0.5s;
   margin-left: 2rem;
@@ -49,6 +50,7 @@ body {
   }
 }
 
+// main menu
 .menu {
   display: flex;
   list-style: none;
@@ -70,6 +72,7 @@ body {
   }
 }
 
+// hamburger menu -lg size
 .header-menu {
   color: $Pink;
   font-size: 2.2rem;
@@ -77,6 +80,7 @@ body {
   display: none;
 }
 
+// header shopping cart icon
 .header-cart {
   font-size: 1.2rem;
   background-color: $Pink;
@@ -93,6 +97,7 @@ body {
   }
 }
 
+// header text
 .header-text {
   width: 100%;
   height: 100%;
@@ -124,7 +129,7 @@ body {
     }
   }
 }
-// store section 
+// store section
 .store {
   .store-container {
     max-width: 70rem;
@@ -134,6 +139,7 @@ body {
   }
 }
 
+// store text
 .store-text {
   font-size: 2.3rem;
   color: $Black;
@@ -146,6 +152,7 @@ body {
   }
 }
 
+// store buttons
 .store-btns {
   display: flex;
   justify-content: center;
@@ -170,6 +177,7 @@ body {
     }
   }
 }
+// search box
 .search-box {
   margin-bottom: 4rem;
   background-color: $White;
@@ -191,25 +199,7 @@ body {
   }
 }
 
-////////////////////// I'll work on it asap //////////////////////////
-// .new-product-modal,
-// .existed-product-modal {
-//   display: none;
-//   justify-content: center;
-//   align-items: center;
-//   background-color: $Grey;
-//   border-radius: 0.5rem;
-//   width: 24rem;
-//   height: 13rem;
-//   position: absolute;
-//   z-index: 2;
-
-//   p {
-//     border: 4px solid $White;
-//     border-radius: 0.5rem;
-//     padding: 4rem 3rem;
-//   }
-// }
+// products
 .products-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));

@@ -228,23 +228,6 @@ cartIcons.forEach(function (icon) {
   });
 });
 
-/////////////////////////////////// I'll work on it asap ////////////////////////////////
-// // appearance and disappearance of the modals
-// let newProductModal = document.querySelector(".new-product-modal");
-// let existedProductModal = document.querySelector(".existed-product-modal");
-// // shows modal after the product added to the basket
-// function showNewModal(e) {
-//   newProductModal.style.left = e.clientX + "px";
-//   newProductModal.style.top = e.clientY + "px";
-//   newProductModal.style.display = "flex";
-// }
-// // shows modal when the product is already in the basket
-// function showExistedModal(e) {
-//   existedProductModal.style.left = e.clientX + "px";
-//   existedProductModal.style.top = e.clientY + "px";
-//   existedProductModal.style.display = "flex";
-// }
-
 // set local storage
 function setLocalStorage(products) {
   localStorage.setItem("user-basket", JSON.stringify(products));
