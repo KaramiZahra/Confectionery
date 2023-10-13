@@ -204,6 +204,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
   grid-auto-rows: 1fr;
+  margin-bottom: 4rem;
 }
 .product {
   margin: 1rem;
@@ -264,5 +265,34 @@ body {
       color: $Pink;
       text-decoration: underline;
     }
+  }
+}
+// about section
+.about-container {
+  display: flex;
+  border-top: 2px solid $Grey;
+  border-bottom: 2px solid $Grey;
+}
+.about-text,
+.about-image {
+  margin: 2rem;
+}
+.about-text {
+  h2 {
+    color: $Pink;
+    font-size: 3rem;
+    margin-bottom: 2.5rem;
+  }
+  p {
+    text-align: justify;
+    font-size: 1.2rem;
+    line-height: 2.7rem;
+  }
+}
+.about-image {
+  img {
+    border-radius: 0.5rem;
+    width: 100%;
+    height: 100%;
   }
 }
