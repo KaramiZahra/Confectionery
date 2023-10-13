@@ -21,6 +21,7 @@ let productsArray = [
   {
     id: 1,
     title: "Cake",
+    label: "Cake",
     price: 17,
     img: "img/cake-1.jpeg",
     count: 1,
@@ -28,77 +29,88 @@ let productsArray = [
   {
     id: 2,
     title: "Cupcake",
-    price: 17,
+    label: "Cupcake",
+    price: 20,
     img: "img/cupcake-1.jpeg",
     count: 1,
   },
   {
     id: 3,
     title: "Doughnut",
-    price: 17,
+    label: "Doughnut",
+    price: 10,
     img: "img/doughnut-1.jpeg",
     count: 1,
   },
   {
     id: 4,
     title: "Cupcake",
-    price: 17,
+    label: "Cupcake",
+    price: 18,
     img: "img/cupcake-2.jpeg",
     count: 1,
   },
   {
     id: 5,
     title: "Doughnut",
-    price: 17,
+    label: "Doughnut",
+    price: 14,
     img: "img/doughnut-2.jpeg",
     count: 1,
   },
   {
     id: 6,
     title: "Sweet",
-    price: 17,
+    label: "Sweet",
+    price: 8,
     img: "img/sweets-1.jpeg",
     count: 1,
   },
   {
     id: 7,
     title: "Sweet",
-    price: 17,
+    label: "Sweet",
+    price: 11,
     img: "img/sweets-2.jpeg",
     count: 1,
   },
   {
     id: 8,
     title: "Cupcake",
-    price: 17,
+    label: "Cupcake",
+    price: 16,
     img: "img/cupcake-3.jpeg",
     count: 1,
   },
   {
     id: 9,
     title: "Cake",
-    price: 17,
+    label: "Cake",
+    price: 23,
     img: "img/cake-2.jpeg",
     count: 1,
   },
   {
     id: 10,
     title: "Sweet",
-    price: 17,
+    label: "Sweet",
+    price: 7,
     img: "img/sweets-3.jpeg",
     count: 1,
   },
   {
     id: 11,
     title: "Cake",
-    price: 17,
+    label: "Cake",
+    price: 21,
     img: "img/cake-3.jpeg",
     count: 1,
   },
   {
     id: 12,
     title: "Doughnut",
-    price: 17,
+    label: "Doughnut",
+    price: 13,
     img: "img/doughnut-3.jpeg",
     count: 1,
   },
@@ -125,6 +137,49 @@ function createProductCard(products) {
   });
 }
 createProductCard(productsArray);
+
+// categorization
+let allBtn = document.querySelector(".all-btn");
+let cakeBtn = document.querySelector(".cake-btn");
+let cupcakeBtn = document.querySelector(".cupcake-btn");
+let doughnutBtn = document.querySelector(".doughnut-btn");
+let sweetBtn = document.querySelector(".sweet-btn");
+
+// shows all products
+allBtn.addEventListener("click", function () {
+  let allFilter = productsArray.filter(function (all) {
+    return all.label;
+  });
+  createProductCard(allFilter);
+});
+// shows cakes
+cakeBtn.addEventListener("click", function () {
+  let cakeFilter = productsArray.filter(function (cake) {
+    return cake.label === "Cake";
+  });
+  createProductCard(cakeFilter);
+});
+// shows cupcakes
+cupcakeBtn.addEventListener("click", function () {
+  let cupcakeFilter = productsArray.filter(function (cupcake) {
+    return cupcake.label === "Cupcake";
+  });
+  createProductCard(cupcakeFilter);
+});
+// shows doughnuts
+doughnutBtn.addEventListener("click", function () {
+  let doughnutFilter = productsArray.filter(function (doughnut) {
+    return doughnut.label === "Doughnut";
+  });
+  createProductCard(doughnutFilter);
+});
+// shows sweets
+sweetBtn.addEventListener("click", function () {
+  let sweetFilter = productsArray.filter(function (sweet) {
+    return sweet.label === "Sweet";
+  });
+  createProductCard(sweetFilter);
+});
 
 // show product's cart icon
 let product = document.querySelectorAll(".product");
@@ -166,3 +221,4 @@ cartIcons.forEach(function (icon) {
     }
   });
 });
+
